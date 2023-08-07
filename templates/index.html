@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheet/style.css') }}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Weather APP</title>
+
+
+    <body class="bg-dark">
+
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="container">
+        <h1 class="app-title">Weather App</h1>
+        <form action="/" method="POST" class="search-form">
+            <label for="city" class="label">Enter city name:</label>
+            <input type="text" id="city" name="name" placeholder="Enter city name" required>
+            <input type="submit" value="Search" class="submit-btn">
+        </form>
+        {% if weather %}
+        <div class="weather-info">
+            <h2 class="weather-location">Weather for {{ location.city }}:</h2>
+            <p class="weather-data">Weather: {{ weather.weather }} <img src="{{ weather.icon }}" width="40px" height="40px"></p>
+            <p class="weather-data">Weather description: {{ weather.weather_description }}</p>
+            <p class="weather-data">Temperature: {{ weather.temp }} °C</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="d-flex flex-column justify-content-center w-100 h-100">
+
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            </div>
+        </div>
+    </div>
+      
+</body>
+</html>
