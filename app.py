@@ -3,7 +3,7 @@ import requests
 
 
 app = Flask(__name__)
-key = 'eb98d92f70499a063cbb34e95bb32ef0'
+key = 'YOUR-API-KEY'
 
 
 
